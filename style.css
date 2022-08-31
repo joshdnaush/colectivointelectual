@@ -1,0 +1,94 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+	background-blend-mode: darken;
+}
+
+.showcase {
+    position: fixed;
+    right: 0;
+    width: 100%;
+    min-height:100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+}
+
+.showcase video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 1;	
+	z-index: 2;
+}
+
+/* Glowing Effect */
+
+@keyframes glowing {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+	0% { opacity: 0; }
+}
+
+/* Red Glow */
+
+.red-glow {
+	padding-left: 0;
+	border-left: 0;
+	margin-left: 0;
+	animation: glowing 2s infinite;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    min-height:100vh;
+    display: flex;
+    z-index: 200;
+}
+
+
+.red-glow img {
+	padding-right: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    opacity: 1;	
+	z-index: 200;
+}
+
+/* Blue Glow */
+
+.blue-glow {
+	padding-right: 0;
+	border-right: 0;
+	margin-right: 0;
+	animation: glowing 2s infinite;
+    position: absolute;
+    right: 0;
+    width: 100%;
+    min-height:100vh;
+    display: flex;
+    z-index: 200;
+}
+
+.blue-glow img {
+	padding-left: 50%;
+	filter: hue-rotate(240deg);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    opacity: 1;	
+	z-index: 200;
+}
+
+
